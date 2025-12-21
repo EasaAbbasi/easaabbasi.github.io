@@ -21,6 +21,7 @@ body {
 
 header {
     margin-bottom: 50px;
+    position: relative;
 }
 
 header h1 {
