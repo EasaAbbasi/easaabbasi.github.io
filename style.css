@@ -92,13 +92,18 @@ footer {
 /* ---------- Dark Mode ---------- */
 
 #theme-toggle {
-    margin-top: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+
     padding: 6px 12px;
-    font-size: 0.9em;
+    font-size: 0.85em;
     cursor: pointer;
+
     background: none;
     border: 1px solid #ccc;
 }
+
 
 body.dark {
     background-color: #121212;
