@@ -1,41 +1,78 @@
+/* ---------- Global ---------- */
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f8f8f8;
+    font-family: "Georgia", "Times New Roman", serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.7;
 }
+
+/* ---------- Layout ---------- */
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ---------- Header ---------- */
 
 header {
-    background: #003366;
-    color: white;
-    padding: 30px;
-    text-align: center;
+    margin-bottom: 50px;
 }
 
-nav {
-    background: #ddd;
-    padding: 10px;
-    text-align: center;
+header h1 {
+    font-size: 2.4em;
+    margin-bottom: 5px;
 }
 
-nav a {
-    margin: 10px;
+.subtitle {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
     text-decoration: none;
-    color: #003366;
-    font-weight: bold;
+    color: #1a4cff;
 }
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Sections ---------- */
 
 section {
-    padding: 30px;
-    background: white;
-    margin: 20px;
-    border-radius: 5px;
+    margin-bottom: 45px;
 }
 
+section h2 {
+    font-size: 1.4em;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* ---------- Lists ---------- */
+
+ul, ol {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* ---------- Footer ---------- */
+
 footer {
-    text-align: center;
-    padding: 15px;
-    background: #003366;
-    color: white;
+    margin-top: 60px;
+    font-size: 0.9em;
+    color: #666;
 }
