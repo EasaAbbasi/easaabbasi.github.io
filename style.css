@@ -51,6 +51,7 @@ header h1 {
 
 section {
     margin-bottom: 45px;
+    background-color: #ffffff;   /* IMPORTANT FIX */
 }
 
 section h2 {
@@ -89,7 +90,7 @@ footer {
     margin-bottom: 18px;
 }
 
-/* ---------- Dark Mode ---------- */
+/* ---------- Dark Mode Toggle ---------- */
 
 #theme-toggle {
     position: absolute;
@@ -102,8 +103,10 @@ footer {
 
     background: none;
     border: 1px solid #ccc;
+    color: inherit;
 }
 
+/* ---------- Dark Mode ---------- */
 
 body.dark {
     background-color: #121212;
@@ -122,3 +125,6 @@ body.dark section h2 {
     border-bottom: 1px solid #444;
 }
 
+body.dark #theme-toggle {
+    border: 1px solid #555;
+}
