@@ -13,34 +13,33 @@
 
     <header>
 
-    <img src="profile.jpg" alt="Easa Abbasi" class="profile-photo">
+        <!-- PROFILE PHOTO -->
+        <img src="profile.jpg" alt="Easa Abbasi" class="profile-photo">
 
-    <h1>Easa Abbasi</h1>
+        <h1>Easa Abbasi</h1>
 
-    <p class="subtitle">
-        Researcher | Department | University
-    </p>
+        <p class="subtitle">
+            Researcher | Department | University
+        </p>
 
-    <p class="links">
-        <a href="https://scholar.google.com/">Google Scholar</a> ·
-        <a href="#">ORCID</a> ·
-        <a href="https://github.com/EasaAbbasi">GitHub</a> ·
-        <a href="mailto:yourname@university.edu">Email</a>
-    </p>
+        <p class="links">
+            <a href="https://scholar.google.com/" target="_blank">Google Scholar</a> ·
+            <a href="#">ORCID</a> ·
+            <a href="https://github.com/EasaAbbasi" target="_blank">GitHub</a> ·
+            <a href="mailto:yourname@university.edu">Email</a>
+        </p>
 
-    <!-- DARK MODE BUTTON -->
-    <button id="theme-toggle">Dark mode</button>
+        <!-- DARK MODE BUTTON -->
+        <button id="theme-toggle">Dark mode</button>
 
-</header>
-
+    </header>
 
     <section>
         <h2>About</h2>
         <p>
             I am a researcher in <strong>[your field]</strong> at <strong>[your institution]</strong>.
             My research interests include <strong>topic 1</strong>, <strong>topic 2</strong>,
-            and <strong>topic 3</strong>. My work focuses on both theoretical and applied aspects
-            of these areas.
+            and <strong>topic 3</strong>.
         </p>
     </section>
 
@@ -55,31 +54,29 @@
     </section>
 
     <section>
-    <h2>Selected Publications</h2>
-    <ol>
-        <li>
-            <strong>E. Abbasi</strong>, Coauthor.
-            <em>Title of the paper</em>.
-            Journal / Conference, Year.
-            <a href="#">[PDF]</a>
-        </li>
+        <h2>Selected Publications</h2>
+        <ol>
+            <li>
+                <strong>E. Abbasi</strong>, Coauthor.
+                <em>Title of the paper</em>.
+                Journal / Conference, Year.
+                <a href="#">[PDF]</a>
+            </li>
+            <li>
+                <strong>E. Abbasi</strong>, Coauthor.
+                <em>Another publication title</em>.
+                Journal / Conference, Year.
+                <a href="#">[PDF]</a>
+            </li>
+        </ol>
 
-        <li>
-            <strong>E. Abbasi</strong>, Coauthor.
-            <em>Another publication title</em>.
-            Journal / Conference, Year.
-            <a href="#">[PDF]</a>
-        </li>
-    </ol>
-
-    <p>
-        Full list available on
-        <a href="https://scholar.google.com/citations?user=XXXXXXXX" target="_blank">
-            Google Scholar
-        </a>.
-    </p>
-</section>
-
+        <p>
+            Full list available on
+            <a href="https://scholar.google.com/citations?user=XXXXXXXX" target="_blank">
+                Google Scholar
+            </a>.
+        </p>
+    </section>
 
     <section>
         <h2>Education</h2>
@@ -98,31 +95,19 @@
     </section>
 
     <footer>
-        <p>
-            © 2025 Easa Abbasi
-        </p>
+        <p>© 2025 Easa Abbasi</p>
     </footer>
 
 </div>
 
-<script>
-const toggle = document.getElementById("theme-toggle");
-
-toggle.onclick = () => {
-    document.body.classList.toggle("dark");
-    toggle.textContent =
-        document.body.classList.contains("dark")
-        ? "Light mode"
-        : "Dark mode";
-};
-</script>
+<!-- ONE CLEAN DARK MODE SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("theme-toggle");
 
     toggle.addEventListener("click", function () {
         document.body.classList.toggle("dark");
-        toggle.textContent =
+        toggle.textContent = 
             document.body.classList.contains("dark")
             ? "Light mode"
             : "Dark mode";
