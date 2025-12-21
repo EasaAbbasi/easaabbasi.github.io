@@ -50,6 +50,47 @@ header h1 {
     transform: translateY(-1px);
 }
 
+/* ---------- Top Navigation Bar ---------- */
+.top-nav {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
+    transition: background-color 0.3s, border-bottom 0.3s;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #1a4cff;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.top-nav a:hover {
+    color: #0d2acb;
+    transform: translateY(-1px);
+}
+
+/* Dark mode for nav */
+body.dark .top-nav {
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #444;
+}
+
+body.dark .top-nav a {
+    color: #8ab4f8;
+}
+
+/* ---------- Smooth Scroll ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
 /* ---------- Dark Mode Button ---------- */
 #theme-toggle {
     position: fixed; /* sticky on top-right */
