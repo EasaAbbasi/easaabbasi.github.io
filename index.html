@@ -11,119 +11,120 @@
 
 <button id="theme-toggle">Dark mode</button>
 
-<nav class="top-nav">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#education">Education</a>
-    <a href="#cv">CV</a>
-</nav>
+<div class="layout">
 
-<div class="container">
+    <!-- ===== Sidebar Navigation ===== -->
+    <aside class="sidebar">
+        <h2 class="site-name">Easa AliAbbasi</h2>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#education">Education</a>
+            <a href="#cv">CV</a>
+        </nav>
+    </aside>
 
-<header>
-    <img src="profile.jpg" alt="Easa AliAbbasi" class="profile-photo">
+    <!-- ===== Main Content ===== -->
+    <main class="content">
 
-    <h1>Easa AliAbbasi</h1>
+        <header>
+            <img src="profile.jpg" alt="Easa AliAbbasi" class="profile-photo">
 
-    <p class="subtitle">
-        Postdoctoral Researcher | Max Planck Institute for Informatics
-    </p>
+            <h1>Easa AliAbbasi</h1>
 
-    <p class="links">
-        <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
-        <a href="https://orcid.org/0000-0002-2443-8416" target="_blank">ORCID</a> ·
-        <a href="https://github.com/EasaAbbasi" target="_blank">GitHub</a> ·
-        <a href="mailto:easa.aliabbasi@mpi-inf.mpg.de">Email</a>
-    </p>
-</header>
+            <p class="subtitle">
+                Postdoctoral Researcher | Max Planck Institute for Informatics
+            </p>
 
-<section id="about">
-    <h2>About</h2>
-    <p>
-        I am a postdoctoral researcher at the Max Planck Institute for Informatics and a member
-        of the Sensorimotor Interaction Group. My research focuses on haptics, HCI, and the
-        intersection of haptics and AI.
-    </p>
-</section>
+            <p class="links">
+                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+                <a href="https://orcid.org/0000-0002-2443-8416" target="_blank">ORCID</a> ·
+                <a href="https://github.com/EasaAbbasi" target="_blank">GitHub</a> ·
+                <a href="mailto:easa.aliabbasi@mpi-inf.mpg.de">Email</a>
+            </p>
+        </header>
 
-<section id="research">
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Haptics</li>
-        <li>Human-Computer Interaction (HCI)</li>
-        <li>Haptics and Artificial Intelligence</li>
-    </ul>
-</section>
-
-<section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-        <img src="project1.jpg" alt="Project 1 figure">
-        <div class="project-text">
-            <h3>AI for Haptics</h3>
+        <section id="about">
+            <h2>About</h2>
             <p>
-                A research project investigating how machine learning models can generate,
-                optimize, and interpret haptic signals for interactive systems.
+                I am a postdoctoral researcher at the Max Planck Institute for Informatics and a member
+                of the Sensorimotor Interaction Group. My research focuses on haptics, HCI, and the
+                intersection of haptics and AI.
             </p>
-            <p class="project-links">
-                <a href="#">Paper</a> · <a href="#">Code</a>
-            </p>
-        </div>
-    </div>
+        </section>
 
-    <div class="project">
-        <img src="project2.jpg" alt="Project 2 figure">
-        <div class="project-text">
-            <h3>Scene2Hap</h3>
+        <section id="research">
+            <h2>Research Interests</h2>
+            <ul>
+                <li>Haptics</li>
+                <li>Human-Computer Interaction (HCI)</li>
+                <li>Haptics and Artificial Intelligence</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="project">
+                <img src="project1.jpg" alt="Project 1 figure">
+                <div class="project-text">
+                    <h3>AI for Haptics</h3>
+                    <p>
+                        Machine learning models for generating, optimizing, and interpreting
+                        haptic signals in interactive systems.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="project2.jpg" alt="Project 2 figure">
+                <div class="project-text">
+                    <h3>Scene2Hap</h3>
+                    <p>
+                        Automatic vibrotactile feedback generation for VR scenes using LLMs
+                        and physical modeling.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <ol>
+                <li>
+                    <strong>E. AliAbbasi</strong> et al.,
+                    <em>AI for Haptics and Haptics for AI</em>, CHI EA 2026.
+                </li>
+                <li>
+                    A. Jingu, <strong>E. AliAbbasi</strong> et al.,
+                    <em>Scene2Hap</em>, arXiv 2025.
+                </li>
+            </ol>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li><strong>PhD</strong>, Koç University, 2024</li>
+                <li><strong>MSc</strong>, University of Tabriz, 2017</li>
+                <li><strong>BSc</strong>, Azad University, 2014</li>
+            </ul>
+        </section>
+
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
             <p>
-                Automatically generating vibrotactile feedback for full VR scenes using
-                LLMs and physical modeling.
+                <a href="cv.pdf" target="_blank">Download CV (PDF)</a>
             </p>
-            <p class="project-links">
-                <a href="#">Paper</a> · <a href="#">Demo</a>
-            </p>
-        </div>
-    </div>
+        </section>
 
-</section>
+        <footer>
+            <p>© 2025 Easa AliAbbasi</p>
+        </footer>
 
-<section id="publications">
-    <h2>Selected Publications</h2>
-    <ol>
-        <li>
-            <strong>E. AliAbbasi</strong> et al.,
-            <em>AI for Haptics and Haptics for AI</em>, CHI EA 2026.
-        </li>
-        <li>
-            A. Jingu, <strong>E. AliAbbasi</strong> et al.,
-            <em>Scene2Hap</em>, arXiv 2025.
-        </li>
-    </ol>
-</section>
-
-<section id="education">
-    <h2>Education</h2>
-    <ul>
-        <li><strong>PhD</strong>, Koç University, 2024</li>
-        <li><strong>MSc</strong>, University of Tabriz, 2017</li>
-        <li><strong>BSc</strong>, Azad University, 2014</li>
-    </ul>
-</section>
-
-<section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>
-        <a href="cv.pdf" target="_blank">Download CV (PDF)</a>
-    </p>
-</section>
-
-<footer>
-    <p>© 2025 Easa AliAbbasi</p>
-</footer>
-
+    </main>
 </div>
 
 <script>
