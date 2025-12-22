@@ -1,4 +1,3 @@
-/* ---------- Global ---------- */
 body {
     margin: 0;
     font-family: Georgia, "Times New Roman", serif;
@@ -8,16 +7,13 @@ body {
     transition: background 0.3s, color 0.3s;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body.dark {
     background: #121212;
     color: #e0e0e0;
 }
 
-/* ---------- Theme Toggle ---------- */
 #theme-toggle {
     position: fixed;
     top: 15px;
@@ -35,54 +31,38 @@ body.dark #theme-toggle {
     color: #e0e0e0;
 }
 
-/* ---------- Layout ---------- */
-.layout {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* ---------- Sidebar ---------- */
-.sidebar {
-    width: 220px;
-    padding: 30px 20px;
-    background: #f7f7f7;
+.top-nav {
     position: sticky;
     top: 0;
-    height: 100vh;
-    box-sizing: border-box;
-}
-
-body.dark .sidebar {
-    background: #1e1e1e;
-}
-
-.site-name {
-    margin-top: 0;
-    margin-bottom: 25px;
-    font-size: 1.4em;
+    background: #ffffff;
+    padding: 10px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
+    z-index: 999;
 }
 
-.sidebar nav a {
-    display: block;
-    margin-bottom: 12px;
+body.dark .top-nav {
+    background: #1e1e1e;
+    border-color: #444;
+}
+
+.top-nav a {
+    margin: 0 10px;
     text-decoration: none;
     font-weight: bold;
     color: #1a4cff;
 }
 
-body.dark .sidebar nav a {
+body.dark .top-nav a {
     color: #8ab4f8;
 }
 
-/* ---------- Content ---------- */
-.content {
-    flex: 1;
-    padding: 40px;
+.container {
     max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
 }
 
-/* ---------- Header ---------- */
 header {
     text-align: center;
     margin-bottom: 50px;
@@ -96,24 +76,6 @@ header {
     margin-bottom: 15px;
 }
 
-.subtitle {
-    color: #555;
-}
-
-body.dark .subtitle {
-    color: #bbb;
-}
-
-.links a {
-    color: #1a4cff;
-    text-decoration: none;
-}
-
-body.dark .links a {
-    color: #8ab4f8;
-}
-
-/* ---------- Sections ---------- */
 section {
     background: #ffffff;
     padding: 25px;
@@ -136,16 +98,6 @@ body.dark section {
     box-shadow: none;
 }
 
-section h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 6px;
-}
-
-body.dark section h2 {
-    border-color: #444;
-}
-
-/* ---------- Projects ---------- */
 .project {
     display: flex;
     gap: 20px;
@@ -158,38 +110,16 @@ body.dark section h2 {
     object-fit: cover;
 }
 
-.project-text h3 {
-    margin-top: 0;
-}
-
-/* ---------- Footer ---------- */
-footer {
-    text-align: center;
-    color: #666;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-    .layout {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        text-align: center;
-    }
-
-    .content {
-        padding: 20px;
-    }
-
+@media (max-width: 768px) {
     .project {
         flex-direction: column;
     }
-
     .project img {
         width: 100%;
     }
+}
+
+footer {
+    text-align: center;
+    color: #666;
 }
