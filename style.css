@@ -173,3 +173,52 @@ body.dark #theme-toggle:hover {
         overflow-x: auto;
     }
 }
+
+/* ---------- BibTeX Modal ---------- */
+.bibtex-content {
+    display: none;
+}
+
+.bibtex-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 2000;
+}
+
+.bibtex-box {
+    background: #ffffff;
+    max-width: 600px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+body.dark .bibtex-box {
+    background: #1e1e1e;
+}
+
+.bibtex-box pre {
+    white-space: pre-wrap;
+    font-size: 0.9em;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#bibtex-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#bibtex-copy {
+    margin-top: 10px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
