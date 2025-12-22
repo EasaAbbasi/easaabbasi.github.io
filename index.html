@@ -238,16 +238,41 @@
 
 </div>
 
-<!-- DARK MODE SCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", function () {
-        document.body.classList.toggle("dark");
-        toggle.textContent = document.body.classList.contains("dark") ? "Light mode" : "Dark mode";
+// ---------- DARK MODE ----------
+document.getElementById("theme-toggle").onclick = function () {
+    document.body.classList.toggle("dark");
+    this.textContent =
+        document.body.classList.contains("dark")
+        ? "Light mode"
+        : "Dark mode";
+};
+
+// ---------- BIBTEX POPUP ----------
+document.querySelectorAll(".bib-link").forEach(link => {
+    link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const bibId = this.dataset.bibId;
+        const bibText = document.getElementById(bibId).textContent;
+
+        document.getElementById("bibtex-text").textContent = bibText;
+        document.getElementById("bibtex-modal").style.display = "block";
     });
 });
+
+document.getElementById("bibtex-close").onclick = function () {
+    document.getElementById("bibtex-modal").style.display = "none";
+};
+
+document.getElementById("bibtex-copy").onclick = function () {
+    const text = document.getElementById("bibtex-text").textContent;
+    navigator.clipboard.writeText(text);
+    this.textContent = "Copied!";
+    setTimeout(() => this.textContent = "Copy BibTeX", 1500);
+};
 </script>
+
 
 <!-- BibTeX Modal -->
 <div id="bibtex-modal" class="bibtex-modal">
