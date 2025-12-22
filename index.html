@@ -13,7 +13,7 @@
 
 <div class="layout">
 
-    <!-- LEFT COLUMN: STICKY TABS -->
+    <!-- LEFT COLUMN -->
     <aside class="sidebar-left">
         <nav class="side-nav">
             <a href="#about">About</a>
@@ -25,22 +25,19 @@
         </nav>
     </aside>
 
-    <!-- MIDDLE COLUMN: MAIN CONTENT -->
+    <!-- CENTER COLUMN -->
     <main class="content">
 
         <header class="profile-header">
-            <img src="profile.jpg" alt="Easa AliAbbasi" class="profile-photo">
-
+            <img src="profile.jpg" class="profile-photo" alt="Easa AliAbbasi">
             <h1>Easa AliAbbasi</h1>
-
             <p class="subtitle">
                 Postdoctoral Researcher | Max Planck Institute for Informatics
             </p>
-
             <p class="links">
-                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
-                <a href="https://orcid.org/0000-0002-2443-8416" target="_blank">ORCID</a> ·
-                <a href="https://github.com/EasaAbbasi" target="_blank">GitHub</a> ·
+                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en">Google Scholar</a> ·
+                <a href="https://orcid.org/0000-0002-2443-8416">ORCID</a> ·
+                <a href="https://github.com/EasaAbbasi">GitHub</a> ·
                 <a href="mailto:easa.aliabbasi@mpi-inf.mpg.de">Email</a>
             </p>
         </header>
@@ -54,8 +51,8 @@
                 displays and understanding the human sense of touch. My current research interests include
                 haptics, human-computer interaction (HCI), and the intersection of haptics and AI. In my
                 research, I aim to develop methods and tools for understanding human sense of touch,
-                developing AI models to enhance haptics, and developing tactile displays to convey
-                sensory information.
+                developing AI models to enhance haptics, and developing tactile displays to convey sensory
+                information.
             </p>
         </section>
 
@@ -72,24 +69,18 @@
             <h2>Projects</h2>
 
             <div class="project">
-                <img src="project1.jpg" alt="Project figure 1">
+                <img src="project1.jpg">
                 <div>
                     <h3>Project Title 1</h3>
-                    <p>
-                        Short description of the project. You can explain the goal, method,
-                        or contribution here without changing your research narrative.
-                    </p>
+                    <p>Short description of the project.</p>
                 </div>
             </div>
 
             <div class="project">
-                <img src="project2.jpg" alt="Project figure 2">
+                <img src="project2.jpg">
                 <div>
                     <h3>Project Title 2</h3>
-                    <p>
-                        Short description of another project. Figures can be screenshots,
-                        diagrams, or paper figures.
-                    </p>
+                    <p>Short description of another project.</p>
                 </div>
             </div>
         </section>
@@ -97,58 +88,34 @@
         <section id="publications">
             <h2>Selected Publications</h2>
             <ol>
-                <li>
-                    <strong>E. AliAbbasi</strong>, D. Wittchen, Y. Li, S. Lu, T. Müller,
-                    D. Degraen, T. Leimkühler, S. H. Yoon, H. Seifi, O. Schneider,
-                    H. Culbertson, J. Steimle, and P. Strohmeier,
-                    “AI for Haptics and Haptics for AI: Challenges and Opportunities”,
-                    Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems
-                    CHI EA’26, Barcelona, Spain, ACM, 2026.
-                </li>
-                <li>
-                    A. Jingu, <strong>E. AliAbbasi</strong>, P. Strohmeier, J. Steimle.
-                    “Scene2Hap: Combining LLMs and physical modeling for automatically generating
-                    vibrotactile signals for full VR scenes”, arXiv preprint, arXiv:2504.19611, 2025.
-                </li>
+                <li>AI for Haptics and Haptics for AI — CHI EA 2026</li>
+                <li>Scene2Hap — arXiv 2025</li>
             </ol>
-
-            <p>
-                Full list available on
-                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">
-                    Google Scholar
-                </a>.
-            </p>
         </section>
 
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li><strong>PhD</strong>, Computational Sciences and Engineering — Koc University, 01/2024</li>
-                <li><strong>MSc</strong>, Mechatronics Engineering — University of Tabriz, 02/2017</li>
-                <li><strong>BSc</strong>, Electrical and Electronics Engineering — zad University, 08/2014</li>
+                <li>PhD — Koç University, 2024</li>
+                <li>MSc — University of Tabriz, 2017</li>
+                <li>BSc — Azad University, 2014</li>
             </ul>
         </section>
 
         <section id="cv">
             <h2>Curriculum Vitae</h2>
-            <p>
-                <a href="cv.pdf" target="_blank">Download CV (PDF)</a>
-            </p>
+            <a href="cv.pdf">Download CV</a>
         </section>
-
-        <footer>
-            © 2025 Easa AliAbbasi
-        </footer>
 
     </main>
 
-    <!-- RIGHT COLUMN: NEWS -->
+    <!-- RIGHT COLUMN -->
     <aside class="sidebar-right">
         <h3>News</h3>
         <ul>
-            <li>Jan 2025 – CHI 2026 paper accepted</li>
-            <li>Dec 2024 – Joined MPI for Informatics</li>
-            <li>Sep 2024 – Scene2Hap on arXiv</li>
+            <li>2025 — CHI EA paper accepted</li>
+            <li>2024 — Joined MPI</li>
+            <li>2024 — PhD awarded</li>
         </ul>
     </aside>
 
@@ -157,10 +124,6 @@
 <script>
 document.getElementById("theme-toggle").onclick = function () {
     document.body.classList.toggle("dark");
-    this.textContent =
-        document.body.classList.contains("dark")
-        ? "Light mode"
-        : "Dark mode";
 };
 </script>
 
