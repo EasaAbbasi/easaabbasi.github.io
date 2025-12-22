@@ -12,13 +12,12 @@ html {
     scroll-behavior: smooth;
 }
 
-/* ---------- Dark Mode ---------- */
 body.dark {
     background: #121212;
     color: #e0e0e0;
 }
 
-/* ---------- Top Controls ---------- */
+/* ---------- Theme Toggle ---------- */
 #theme-toggle {
     position: fixed;
     top: 15px;
@@ -36,45 +35,59 @@ body.dark #theme-toggle {
     color: #e0e0e0;
 }
 
-.top-nav {
+/* ---------- Layout ---------- */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar {
+    width: 220px;
+    padding: 30px 20px;
+    background: #f7f7f7;
     position: sticky;
     top: 0;
-    background: #ffffff;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    z-index: 999;
+    height: 100vh;
+    box-sizing: border-box;
 }
 
-body.dark .top-nav {
+body.dark .sidebar {
     background: #1e1e1e;
-    border-color: #444;
 }
 
-.top-nav a {
-    margin: 0 10px;
+.site-name {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.sidebar nav a {
+    display: block;
+    margin-bottom: 12px;
     text-decoration: none;
     font-weight: bold;
     color: #1a4cff;
 }
 
-body.dark .top-nav a {
+body.dark .sidebar nav a {
     color: #8ab4f8;
 }
 
-/* ---------- Layout ---------- */
-.container {
+/* ---------- Content ---------- */
+.content {
+    flex: 1;
+    padding: 40px;
     max-width: 900px;
-    margin: auto;
-    padding: 40px 20px;
 }
 
+/* ---------- Header ---------- */
 header {
     text-align: center;
     margin-bottom: 50px;
 }
 
-/* ---------- Profile ---------- */
 .profile-photo {
     width: 130px;
     height: 130px;
@@ -149,18 +162,29 @@ body.dark section h2 {
     margin-top: 0;
 }
 
-.project-links a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #1a4cff;
-}
-
-body.dark .project-links a {
-    color: #8ab4f8;
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    color: #666;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
     .project {
         flex-direction: column;
     }
@@ -168,10 +192,4 @@ body.dark .project-links a {
     .project img {
         width: 100%;
     }
-}
-
-/* ---------- Footer ---------- */
-footer {
-    text-align: center;
-    color: #666;
 }
