@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- DARK MODE BUTTON -->
 <button id="theme-toggle">Dark mode</button>
 
-<div class="container">
+<div class="layout">
 
     <!-- LEFT COLUMN: STICKY TABS -->
-    <aside class="column-left">
-        <nav class="vertical-nav">
+    <aside class="sidebar-left">
+        <nav class="side-nav">
             <a href="#about">About</a>
             <a href="#research">Research</a>
             <a href="#projects">Projects</a>
@@ -26,20 +26,24 @@
     </aside>
 
     <!-- MIDDLE COLUMN: MAIN CONTENT -->
-    <main class="column-main">
+    <main class="content">
 
-        <!-- PROFILE PHOTO AND INFO -->
-        <div class="profile">
-            <img src="profile.jpg" alt="Easa Abbasi" class="profile-photo">
+        <header class="profile-header">
+            <img src="profile.jpg" alt="Easa AliAbbasi" class="profile-photo">
+
             <h1>Easa AliAbbasi</h1>
-            <p class="subtitle">Postdoctoral Researcher | Max Planck Institute for Informatics</p>
+
+            <p class="subtitle">
+                Postdoctoral Researcher | Max Planck Institute for Informatics
+            </p>
+
             <p class="links">
                 <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
                 <a href="https://orcid.org/0000-0002-2443-8416" target="_blank">ORCID</a> ·
                 <a href="https://github.com/EasaAbbasi" target="_blank">GitHub</a> ·
                 <a href="mailto:easa.aliabbasi@mpi-inf.mpg.de">Email</a>
             </p>
-        </div>
+        </header>
 
         <section id="about">
             <h2>About</h2>
@@ -49,8 +53,9 @@
                 January 2024. During my Ph.D. studies, I worked on characterizing electroadhesive tactile
                 displays and understanding the human sense of touch. My current research interests include
                 haptics, human-computer interaction (HCI), and the intersection of haptics and AI. In my
-                research, I aim to develop methods and tools for understanding human sense of touch, developing
-                AI models to enhance haptics, and developing tactile displays to convey sensory information.
+                research, I aim to develop methods and tools for understanding human sense of touch,
+                developing AI models to enhance haptics, and developing tactile displays to convey
+                sensory information.
             </p>
         </section>
 
@@ -65,21 +70,26 @@
 
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <img src="project1.png" alt="Project figure 1">
+
+            <div class="project">
+                <img src="project1.jpg" alt="Project figure 1">
+                <div>
                     <h3>Project Title 1</h3>
-                    <p>Short description of the project. You can explain the goal, method, or contribution here.</p>
+                    <p>
+                        Short description of the project. You can explain the goal, method,
+                        or contribution here without changing your research narrative.
+                    </p>
                 </div>
-                <div class="project">
-                    <img src="project2.png" alt="Project figure 2">
+            </div>
+
+            <div class="project">
+                <img src="project2.jpg" alt="Project figure 2">
+                <div>
                     <h3>Project Title 2</h3>
-                    <p>Short description of another project. Figures can be screenshots, diagrams, or paper figures.</p>
-                </div>
-                <div class="project">
-                    <img src="project3.png" alt="Project figure 3">
-                    <h3>Project Title 3</h3>
-                    <p>Short description of a third project. Include images and short explanations.</p>
+                    <p>
+                        Short description of another project. Figures can be screenshots,
+                        diagrams, or paper figures.
+                    </p>
                 </div>
             </div>
         </section>
@@ -88,20 +98,25 @@
             <h2>Selected Publications</h2>
             <ol>
                 <li>
-                    <strong>E. AliAbbasi</strong>, D. Wittchen, Y. Li, S. Lu, T. Müller, D. Degraen, T. Leimkühler,
-                    S. H. Yoon, H. Seifi, O. Schneider, H. Culbertson, J. Steimle, and P. Strohmeier, “AI for Haptics
-                    and Haptics for AI: Challenges and Opportunities”, Extended Abstracts of the 2026 CHI Conference
-                    on Human Factors in Computing Systems CHI EA’26, <strong>to be held in</strong> Barcelona, Spain, ACM, 2026.
+                    <strong>E. AliAbbasi</strong>, D. Wittchen, Y. Li, S. Lu, T. Müller,
+                    D. Degraen, T. Leimkühler, S. H. Yoon, H. Seifi, O. Schneider,
+                    H. Culbertson, J. Steimle, and P. Strohmeier,
+                    “AI for Haptics and Haptics for AI: Challenges and Opportunities”,
+                    Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems
+                    CHI EA’26, Barcelona, Spain, ACM, 2026.
                 </li>
                 <li>
-                    A. Jingu, <strong>E. AliAbbasi</strong>, P. Strohmeier, J. Steimle. “Scene2Hap: Combining
-                    LLMs and physical modeling for automatically generating vibrotactile signals for full VR scenes”, arXiv preprint,
-                    arXiv:2504.19611, 2025.
+                    A. Jingu, <strong>E. AliAbbasi</strong>, P. Strohmeier, J. Steimle.
+                    “Scene2Hap: Combining LLMs and physical modeling for automatically generating
+                    vibrotactile signals for full VR scenes”, arXiv preprint, arXiv:2504.19611, 2025.
                 </li>
             </ol>
+
             <p>
                 Full list available on
-                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">Google Scholar</a>.
+                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">
+                    Google Scholar
+                </a>.
             </p>
         </section>
 
@@ -116,34 +131,37 @@
 
         <section id="cv">
             <h2>Curriculum Vitae</h2>
-            <p><a href="cv.pdf" target="_blank">Download CV (PDF)</a></p>
+            <p>
+                <a href="cv.pdf" target="_blank">Download CV (PDF)</a>
+            </p>
         </section>
+
+        <footer>
+            © 2025 Easa AliAbbasi
+        </footer>
 
     </main>
 
     <!-- RIGHT COLUMN: NEWS -->
-    <aside class="column-right">
-        <div class="news">
-            <h3>News & Updates</h3>
-            <ul>
-                <li>Jan 2025: Paper accepted at CHI 2026.</li>
-                <li>Dec 2024: Joined Max Planck Institute for Informatics.</li>
-                <li>Sep 2024: Published Scene2Hap preprint on arXiv.</li>
-            </ul>
-        </div>
+    <aside class="sidebar-right">
+        <h3>News</h3>
+        <ul>
+            <li>Jan 2025 – CHI 2026 paper accepted</li>
+            <li>Dec 2024 – Joined MPI for Informatics</li>
+            <li>Sep 2024 – Scene2Hap on arXiv</li>
+        </ul>
     </aside>
 
 </div>
 
-<!-- DARK MODE SCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("theme-toggle");
-    toggle.addEventListener("click", function () {
-        document.body.classList.toggle("dark");
-        toggle.textContent = document.body.classList.contains("dark") ? "Light mode" : "Dark mode";
-    });
-});
+document.getElementById("theme-toggle").onclick = function () {
+    document.body.classList.toggle("dark");
+    this.textContent =
+        document.body.classList.contains("dark")
+        ? "Light mode"
+        : "Dark mode";
+};
 </script>
 
 </body>
