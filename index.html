@@ -13,19 +13,33 @@
 
 <div class="container">
 
-    <!-- COLUMN 1: NAVIGATION -->
-    <aside class="column column-left">
+    <!-- LEFT COLUMN: STICKY TABS -->
+    <aside class="column-left">
         <nav class="vertical-nav">
             <a href="#about">About</a>
             <a href="#research">Research</a>
+            <a href="#projects">Projects</a>
             <a href="#publications">Publications</a>
             <a href="#education">Education</a>
             <a href="#cv">CV</a>
         </nav>
     </aside>
 
-    <!-- COLUMN 2: MAIN CONTENT -->
-    <main class="column column-main">
+    <!-- MIDDLE COLUMN: MAIN CONTENT -->
+    <main class="column-main">
+
+        <!-- PROFILE PHOTO AND INFO -->
+        <div class="profile">
+            <img src="profile.jpg" alt="Easa Abbasi" class="profile-photo">
+            <h1>Easa AliAbbasi</h1>
+            <p class="subtitle">Postdoctoral Researcher | Max Planck Institute for Informatics</p>
+            <p class="links">
+                <a href="https://scholar.google.com/citations?user=4ai61x8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+                <a href="https://orcid.org/0000-0002-2443-8416" target="_blank">ORCID</a> ·
+                <a href="https://github.com/EasaAbbasi" target="_blank">GitHub</a> ·
+                <a href="mailto:easa.aliabbasi@mpi-inf.mpg.de">Email</a>
+            </p>
+        </div>
 
         <section id="about">
             <h2>About</h2>
@@ -47,6 +61,27 @@
                 <li>Human-Computer Interaction (HCI)</li>
                 <li>Intersection of Haptics and AI</li>
             </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="project1.png" alt="Project figure 1">
+                    <h3>Project Title 1</h3>
+                    <p>Short description of the project. You can explain the goal, method, or contribution here.</p>
+                </div>
+                <div class="project">
+                    <img src="project2.png" alt="Project figure 2">
+                    <h3>Project Title 2</h3>
+                    <p>Short description of another project. Figures can be screenshots, diagrams, or paper figures.</p>
+                </div>
+                <div class="project">
+                    <img src="project3.png" alt="Project figure 3">
+                    <h3>Project Title 3</h3>
+                    <p>Short description of a third project. Include images and short explanations.</p>
+                </div>
+            </div>
         </section>
 
         <section id="publications">
@@ -86,8 +121,8 @@
 
     </main>
 
-    <!-- COLUMN 3: NEWS / UPDATES -->
-    <aside class="column column-right">
+    <!-- RIGHT COLUMN: NEWS -->
+    <aside class="column-right">
         <div class="news">
             <h3>News & Updates</h3>
             <ul>
