@@ -239,48 +239,68 @@
 </div>
 
 <script>
-// ---------- DARK MODE ----------
-document.getElementById("theme-toggle").onclick = function () {
-    document.body.classList.toggle("dark");
-    this.textContent =
-        document.body.classList.contains("dark")
-        ? "Light mode"
-        : "Dark mode";
-};
+document.addEventListener("DOMContentLoaded", function () {
 
-// ---------- BIBTEX POPUP ----------
-document.querySelectorAll(".bib-link").forEach(link => {
-    link.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const bibId = this.dataset.bibId;
-        const bibText = document.getElementById(bibId).textContent;
-
-        document.getElementById("bibtex-text").textContent = bibText;
-        document.getElementById("bibtex-modal").style.display = "block";
+    /* ---------- DARK MODE ---------- */
+    const themeToggle = document.getElementById("theme-toggle");
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark");
+        this.textContent = document.body.classList.contains("dark")
+            ? "Light mode"
+            : "Dark mode";
     });
+
+    /* ---------- BIBTEX MODAL ---------- */
+    const modal = document.getElementById("bibtex-modal");
+    const modalText = document.getElementById("bibtex-text");
+    const closeBtn = document.getElementById("bibtex-close");
+    const copyBtn = document.getElementById("bibtex-copy");
+
+    document.querySelectorAll(".bib-link").forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const bibId = this.dataset.bibId;
+            modalText.textContent = document.getElementById(bibId).textContent;
+            modal.style.display = "block";
+        });
+    });
+
+    /* CLOSE MODAL */
+    closeBtn.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    /* COPY BIBTEX (WITH FALLBACK) */
+    copyBtn.addEventListener("click", function () {
+        const text = modalText.textContent;
+
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(text).then(() => {
+                copyBtn.textContent = "Copied!";
+            });
+        } else {
+            const temp = document.createElement("textarea");
+            temp.value = text;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            copyBtn.textContent = "Copied!";
+        }
+
+        setTimeout(() => {
+            copyBtn.textContent = "Copy BibTeX";
+        }, 1500);
+    });
+
 });
-
-document.getElementById("bibtex-close").onclick = function () {
-    document.getElementById("bibtex-modal").style.display = "none";
-};
-
-document.getElementById("bibtex-copy").onclick = function () {
-    const text = document.getElementById("bibtex-text").textContent;
-    navigator.clipboard.writeText(text);
-    this.textContent = "Copied!";
-    setTimeout(() => this.textContent = "Copy BibTeX", 1500);
-};
 </script>
 
-
-<!-- BibTeX Modal -->
-<div id="bibtex-modal" class="bibtex-modal">
-    <div class="bibtex-box">
-        <button id="bibtex-close">×</button>
-        <pre id="bibtex-text"></pre>
-        <button id="bibtex-copy">Copy BibTeX</button>
-    </div>
-</div>
 </body>
 </html>
