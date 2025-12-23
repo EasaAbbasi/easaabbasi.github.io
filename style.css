@@ -11,7 +11,7 @@ body {
 /* ---------- Container Grid ---------- */
 .container {
     display: grid;
-    grid-template-columns: 220px 1fr 350px;
+    grid-template-columns: 150px 1fr 350px;
     gap: 20px;
     max-width: 1300px;
     margin: 20px auto;
