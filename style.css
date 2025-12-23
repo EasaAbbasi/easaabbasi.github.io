@@ -55,23 +55,38 @@ body {
     transform: translateX(5px);
 }
 
-/* ---------- Dark Mode Button ---------- */
-#theme-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    padding: 6px 14px;
-    font-size: 0.9em;
+/* ---------- Dark Mode Button (Sidebar) ---------- */
+.theme-toggle {
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 14px;
+
+    font-size: 0.95em;
+    font-weight: 600;
     cursor: pointer;
-    background: #f0f0f0;
+
+    background: linear-gradient(135deg, #f5f5f5, #e6e6e6);
+    color: #333;
+
     border: 1px solid #ccc;
-    border-radius: 5px;
-    z-index: 999;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    transition: all 0.25s ease;
 }
 
-#theme-toggle:hover {
-    background: #ddd;
+.theme-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.18);
 }
+
+/* Dark mode appearance */
+body.dark .theme-toggle {
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+    color: #e0e0e0;
+    border-color: #444;
+}
+
 
 /* ---------- Profile ---------- */
 .profile {
