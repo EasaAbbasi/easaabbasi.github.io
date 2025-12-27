@@ -1,4 +1,13 @@
 /* ---------- Global ---------- */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: "Georgia", "Times New Roman", serif;
@@ -11,7 +20,7 @@ body {
 /* ---------- Container Grid ---------- */
 .container {
     display: grid;
-    grid-template-columns: 120px 1fr 350px;
+    grid-template-columns: minmax(90px, 120px) 1fr minmax(0, 350px);
     gap: 20px;
     max-width: 1300px;
     margin: 20px auto;
@@ -27,11 +36,10 @@ body {
 
 .column-main {
     overflow: visible;
+    min-width: 0;
 }
 
 .column-right {
-    
-    top: 20px;
     height: fit-content;
 }
 
@@ -48,6 +56,7 @@ body {
     font-weight: bold;
     color: #1a4cff;
     transition: color 0.3s, transform 0.2s;
+    white-space: nowrap;
 }
 
 .vertical-nav a:hover {
@@ -60,17 +69,13 @@ body {
     margin-top: 30px;
     width: 100%;
     padding: 10px 14px;
-
     font-size: 0.95em;
     font-weight: 600;
     cursor: pointer;
-
     background: linear-gradient(135deg, #f5f5f5, #e6e6e6);
     color: #333;
-
     border: 1px solid #ccc;
     border-radius: 10px;
-
     box-shadow: 0 2px 6px rgba(0,0,0,0.12);
     transition: all 0.25s ease;
 }
@@ -80,13 +85,11 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.18);
 }
 
-/* Dark mode appearance */
 body.dark .theme-toggle {
     background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
     color: #e0e0e0;
     border-color: #444;
 }
-
 
 /* ---------- Profile ---------- */
 .profile {
@@ -121,11 +124,8 @@ section {
 
 .project img {
     width: 100%;
+    height: auto;
     border-radius: 6px;
-}
-
-.project h3 {
-    margin: 10px 0 5px 0;
 }
 
 /* ---------- News Column ---------- */
@@ -142,51 +142,14 @@ body.dark {
     color: #e0e0e0;
 }
 
-body.dark section, body.dark .news {
+body.dark section,
+body.dark .news {
     background-color: #1e1e1e;
     box-shadow: 0px 2px 8px rgba(0,0,0,0.3);
 }
 
 body.dark .vertical-nav a {
     color: #8ab4f8;
-}
-
-body.dark #theme-toggle {
-    background: #222;
-    color: #e0e0e0;
-    border: 1px solid #555;
-}
-
-body.dark #theme-toggle:hover {
-    background: #333;
-}
-
-/* ---------- Responsive ---------- */
-@media (max-width: 1024px) {
-    .container {
-        grid-template-columns: 180px 1fr 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-
-    .column-left, .column-right {
-        position: relative;
-        top: 0;
-        height: auto;
-        margin-bottom: 20px;
-    }
-
-    .vertical-nav {
-        flex-direction: row;
-        gap: 15px;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 10px;
-        overflow-x: auto;
-    }
 }
 
 /* ---------- BibTeX Modal ---------- */
@@ -232,9 +195,14 @@ body.dark .bibtex-box {
     cursor: pointer;
 }
 
-/* ---------- Mobile Layout ---------- */
-@media (max-width: 768px) {
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: minmax(80px, 140px) 1fr minmax(0, 220px);
+    }
+}
 
+@media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
         max-width: 100%;
@@ -255,9 +223,5 @@ body.dark .bibtex-box {
         overflow-x: auto;
         padding-bottom: 10px;
         border-bottom: 1px solid #ddd;
-    }
-
-    body {
-        overflow-x: hidden;
     }
 }
