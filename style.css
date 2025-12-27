@@ -225,3 +225,7 @@ body.dark .bibtex-box {
         border-bottom: 1px solid #ddd;
     }
 }
+
+* {
+    outline: 1px solid red !important;
+}
