@@ -232,8 +232,32 @@ body.dark .bibtex-box {
     cursor: pointer;
 }
 
-#bibtex-copy {
-    margin-top: 10px;
-    padding: 6px 12px;
-    cursor: pointer;
+/* ---------- Mobile Layout ---------- */
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+
+    .column-left,
+    .column-right {
+        position: relative;
+        top: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .vertical-nav {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
 }
