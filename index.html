@@ -57,8 +57,8 @@
                 haptics, human-computer interaction (HCI), and the intersection of haptics and AI. In my research, I aim to develop methods and tools for understanding human sense of touch, developing AI models to enhance haptics, and developing tactile displays to convey sensory information.
             </p>
             <p>
-                I publish my work in haptics and HCI venues and I actively reviewed for IEEE WHC23, UIST24, Tribology International, Eurohaptics24, Hardware X Journal 24, Augmented Humans 25, Hardware X Journal 25, IEEE WHC25,
-                CHI25, UIST25, IEEE Transactions on Visualization and Computer Graphics 25, International Journal of Human Computer Studies 25, CHI26, IEEE VR26, IEEE Haptics Symposium 26, Augmented Humans 26, and IEEE ToH. I received two special recognitions for outstanding reviews in UIST24 and WHC25.
+                I publish my work in haptics and HCI venues and I reviewed for CHI25-26, IEEE Transactions on Haptics 26, SIGGRAPH 26, IEEE WHC23-25, UIST24-25-26, Tribology International 24, Eurohaptics24-26, IEEE RAL 26, Royal Society of Interface 26, Hardware X Journal 24-25, Augmented Humans 25-26,
+                IEEE Transactions on Visualization and Computer Graphics 25-26, International Journal of Human Computer Studies 25, IEEE VR26, IEEE Haptics Symposium 26. I received two special recognitions for outstanding reviews in UIST24 and WHC25.
             </p>
         </section>
 
@@ -92,6 +92,37 @@
             <h3>Journal and Conference Publications</h3>
             <ol>
                 <li>
+                    A. Jingu<sup>&dagger;</sup>, <strong>E. AliAbbasi</strong><sup>&dagger;</sup>, S. Safaee, P. Strohmeier, J. Steimle. “Scene2Hap: Generating Scene-Wide Haptics for VR from Scene Context with Multimodal LLMs”, <em>CHI'26: Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems</em>, Barcelona, Spain, Association for Computing Machinery, 1-21, 2026.
+                    <br>
+                    
+                    <a href="Jingu_2025_Scene2Hap.pdf" target="_blank">[PDF]</a>
+                    ·
+                    <a href="#" class="bib-link" data-bib-id="bib-Jingu26CHI">[BibTeX]</a>
+                
+                    <!-- HIDDEN BIBTEX -->
+                    <pre id="bib-Jingu26CHI" class="bibtex-content">
+@article{jingu2026scene2hap,
+author = {Jingu, Arata and AliAbbasi, Easa and Safaee, Sara and Strohmeier, Paul and Steimle, J\"{u}rgen},
+title = {Scene2Hap: Generating Scene-Wide Haptics for VR from Scene Context with Multimodal LLMs},
+year = {2026},
+isbn = {9798400722783},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3772318.3791297},
+doi = {10.1145/3772318.3791297},
+abstract = {Haptic feedback contributes to immersive virtual reality (VR) experiences. However, designing such feedback at scale for all objects within a VR scene remains time-consuming. We present Scene2Hap, an LLM-centered system that automatically designs object-level vibrotactile feedback for entire VR scenes based on the objects’ semantic attributes and physical context. Scene2Hap employs a multimodal large language model to estimate each object’s semantics and physical context, including its material properties and vibration behavior, from multimodal information in the VR scene. These estimated attributes are then used to generate or retrieve audio signals, subsequently converted into plausible vibrotactile signals. For more realistic spatial haptic rendering, Scene2Hap estimates vibration propagation and attenuation from vibration sources to neighboring objects, considering the estimated material properties and spatial relationships of virtual objects in the scene. Three user studies confirm that Scene2Hap successfully estimates the vibration-related semantics and physical context of VR scenes and produces realistic vibrotactile signals.},
+booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+articleno = {745},
+numpages = {21},
+keywords = {Haptics; vibrotactile; generative; large language model; virtual reality; context.},
+location = {
+},
+series = {CHI '26}
+}
+                    </pre>
+                </li>
+                
+                <li>
                     <strong>E. AliAbbasi</strong>, D. Wittchen, Y. Li, S. Lu, T. Müller, D. Degraen, T. Leimkühler, S. H. Yoon, H. Seifi, O. Schneider, H. Culbertson, J. Steimle, and P. Strohmeier. “AI for Haptics and Haptics for AI: Challenges and Opportunities”, <em>Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA’26)</em>, Barcelona, Spain, Association for Computing Machinery, 2026.
                     <br>
                     
@@ -109,27 +140,6 @@
     year = {2026},
     publisher = {Association for Computing Machinery},
     address = {Barcelona, Spain}
-}
-                    </pre>
-                </li>
-
-                <li>
-                    A. Jingu<sup>&dagger;</sup>, <strong>E. AliAbbasi</strong><sup>&dagger;</sup>, P. Strohmeier, J. Steimle. “Scene2Hap: Combining LLMs and physical modeling for automatically generating vibrotactile signals for full VR scenes”, <em>arXiv preprint</em>, arXiv:2504.19611, 2025.
-                    <br>
-                    
-                    <a href="Jingu_2025_Scene2Hap.pdf" target="_blank">[PDF]</a>
-                    ·
-                    <a href="#" class="bib-link" data-bib-id="bib-Jingu26CHI">[BibTeX]</a>
-                
-                    <!-- HIDDEN BIBTEX -->
-                    <pre id="bib-Jingu26CHI" class="bibtex-content">
-@article{jingu2026scene2hap,
-    title = {Scene2Hap: Combining LLMs and physical modeling for automatically generating vibrotactile signals for full VR scenes},
-    author = {Jingu, Arata and AliAbbasi, Easa and Steimle, Jürgen and Strohmeier, Paul},
-    booktitle = {Extended Abstracts of the CHI Conference on Human Factors in Computing Systems (CHI EA’26)},
-    abstract = {Haptic feedback contributes to immersive virtual reality (VR) experiences. Designing such feedback at scale, for all objects within a VR scene and their respective arrangements, remains a time-consuming task. We present Scene2Hap, an LLM-centered system that automatically designs object-level vibrotactile feedback for entire VR scenes based on the objects' semantic attributes and physical context. Scene2Hap employs a multimodal large language model to estimate the semantics and physical context of each object, including its material properties and vibration behavior, from the multimodal information present in the VR scene. This semantic and physical context is then used to create plausible vibrotactile signals by generating or retrieving audio signals and converting them to vibrotactile signals. For the more realistic spatial rendering of haptics in VR, Scene2Hap estimates the propagation and attenuation of vibration signals from their source across objects in the scene, considering the estimated material properties and physical context, such as the distance and contact between virtual objects. Results from two user studies confirm that Scene2Hap successfully estimates the semantics and physical context of VR scenes, and the physical modeling of vibration propagation improves usability, perceived materiality, and spatial awareness.},
-    year  = {2025},
-    publisher = {arXiv preprint}
 }
                     </pre>
                 </li>
