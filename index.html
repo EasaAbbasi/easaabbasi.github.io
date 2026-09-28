@@ -607,11 +607,12 @@ series = {CHI EA '26}
             <div class="project-grid">
                 <div class="project">
                     <img src="CHI26.jpg" alt="Project figure CHI26">
-                    <h3>Scene2Hap: Combining LLMs and Physical Modeling for Automatically Generating Vibrotactile Signals for Full VR Scenes</h3>
-                    <p>We presented an LLM-centered system that automatically designs object-level vibrotactile feedback for entire VR scenes based on the objects' semantic attributes and physical context. Scene2Hap employs a multimodal large language model to estimate the semantics and physical context of each object, including
-                        its material properties and vibration behavior, from the multimodal information present in the VR scene. This semantic and physical context is then used to create plausible vibrotactile signals by generating or retrieving audio signals and converting them to vibrotactile signals. For the more realistic spatial
-                        rendering of haptics in VR, Scene2Hap estimates the propagation and attenuation of vibration signals from their source across objects in the scene, considering the estimated material properties and physical context, such as the distance and contact between virtual objects.</p>
-                    <p><a href="https://arxiv.org/abs/2504.19611">Paper</a></p>
+                    <h3>Scene2Hap: Generating Scene-Wide Haptics for VR from Scene Context with Multimodal LLMs</h3>
+                    <p>Haptic feedback contributes to immersive virtual reality (VR) experiences. However, designing such feedback at scale for all objects within a VR scene remains time-consuming. We present Scene2Hap, an LLM-centered system that automatically designs object-level vibrotactile feedback for entire VR scenes based on the objects’ semantic attributes
+                        and physical context. Scene2Hap employs a multimodal large language model to estimate each object’s semantics and physical context, including its material properties and vibration behavior, from multimodal information in the VR scene. These estimated attributes are then used to generate or retrieve audio signals, subsequently converted into
+                        plausible vibrotactile signals. For more realistic spatial haptic rendering, Scene2Hap estimates vibration propagation and attenuation from vibration sources to neighboring objects, considering the estimated material properties and spatial relationships of virtual objects in the scene. Three user studies confirm that Scene2Hap successfully
+                        estimates the vibration-related semantics and physical context of VR scenes and produces realistic vibrotactile signals.</p>
+                    <p><a href="https://dl.acm.org/doi/pdf/10.1145/3772318.3791297">Paper</a></p>
                 </div>
                 <div class="project">
                     <img src="MUC25.jpg" alt="Project figure MUC25">
