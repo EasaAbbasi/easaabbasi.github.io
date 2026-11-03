@@ -15,14 +15,13 @@
     <!-- LEFT COLUMN: STICKY TABS -->
     <aside class="column-left">
         <nav class="vertical-nav">
-            <a href="#about">Home</a>
+            <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#projects">Projects</a>
             <a href="#supervision">Supervision</a>
             <a href="#contact">Contact</a>
-            <a href="#news">News</a>
         </nav>
 
         <button id="theme-toggle" class="theme-toggle">
@@ -51,7 +50,7 @@
         </div>
 
         <section id="about">
-            <h2>Home</h2>
+            <h2>About</h2>
             <p>
                 I am a postdoctoral researcher at the <a href="https://www.mpi-inf.mpg.de/home">Max Planck Institute for Informatics</a> and a member of the <a href="https://sensint.mpi-inf.mpg.de/">Sensorimotor Interaction Group</a>. I received my Ph.D. degree from Koç University in
                 January 2024. During my Ph.D. studies at the <a href="https://rml.ku.edu.tr/">Robotics and Mechatronics Laboratory (RML)</a>, I worked on characterizing electroadhesive tactile displays and understanding the human sense of touch. My current research interests include
@@ -762,7 +761,7 @@ series = {CHI '26}
 
     <!-- RIGHT COLUMN: NEWS -->
     <aside class="column-right">
-        <div class="news" id="news">
+        <div class="news">
             <h2>News & Updates</h2>
             <ul>
                 <h4>August 2026</h4>
@@ -808,28 +807,6 @@ series = {CHI '26}
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-
-    /* ---------- TAB NAVIGATION ---------- */
-    const tabs = document.querySelectorAll(".vertical-nav a");
-    const panels = document.querySelectorAll(".column-main section, #news");
-    function showTab(id) {
-        panels.forEach(panel => { panel.style.display = panel.id === id ? "" : "none"; });
-        tabs.forEach(tab => {
-            const active = tab.getAttribute("href") === "#" + id;
-            if (active) tab.setAttribute("aria-current", "page");
-            else tab.removeAttribute("aria-current");
-        });
-        document.querySelector(".profile").style.display = id === "about" ? "" : "none";
-        document.querySelector(".column-right").style.display = id === "news" ? "" : "none";
-    }
-    tabs.forEach(tab => tab.addEventListener("click", function () {
-        showTab(this.getAttribute("href").slice(1));
-    }));
-    window.addEventListener("hashchange", () => {
-        const id = location.hash.slice(1);
-        if ([...panels].some(panel => panel.id === id)) showTab(id);
-    });
-    showTab([...panels].some(panel => panel.id === location.hash.slice(1)) ? location.hash.slice(1) : "about");
 
     /* ---------- DARK MODE ---------- */
     const themeToggle = document.getElementById("theme-toggle");
